@@ -27,6 +27,8 @@ class SettingsController with ChangeNotifier {
   Future<void> loadSettings() async {
     _themeMode = await _settingsService.getThemeMode();
 
+
+
     // Important! Inform listeners a change has occurred.
     notifyListeners();
   }

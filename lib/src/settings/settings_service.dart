@@ -8,6 +8,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 /// you'd like to store settings on a web server, use the http package.
 class SettingsService {
   final Future<SharedPreferences> _prefs = SharedPreferences.getInstance();
+  // переменная инициализируется когда getThemeMode() если к ней обратятся до вызова всё упадёт
   late SharedPreferences prefs;
 
   Future<ThemeMode> getThemeMode() async {
